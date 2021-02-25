@@ -1,9 +1,12 @@
+You can use following commands to verify any TF code change you have made.
+
 # run Python unit tests
 ```
 bazel test --test_output=all --verbose_failures -c opt  //tensorflow/python/data/kernel_tests:unbatch_test
 ```
 First time run takes 1 hour first time as it needs to build the whole TF projects, but subsequent run is very fast.
- 
+
+
 # run C++ unit tests
 ```
 bazel test --test_output=all --verbose_failures -c opt tensorflow/core:__tensorflow_core_lib_io_legacy_lib_io_all_tests
