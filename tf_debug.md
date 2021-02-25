@@ -1,4 +1,4 @@
-You can use following commands to verify any TF code change you have made.
+You can use following commands to verify any TF code change you have made or debug TF code.
 
 # run Python unit tests
 ```
