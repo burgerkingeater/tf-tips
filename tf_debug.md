@@ -4,7 +4,7 @@ You can use following commands to debug TF internal code or verify any code chan
 
 All of the following commands are run under the [root dir of TF repo](https://github.com/tensorflow/tensorflow/).
 
-All of the commands takes 1 hour first time as it needs to build the entire TF project, but subsequent run is very fast.
+First time invoking any of the commands takes 1 hour+ as it needs to build the entire TF project, but subsequent run is very fast with bazel cache.
 
 # run Python unit tests
 ```
