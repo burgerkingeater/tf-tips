@@ -2,6 +2,8 @@
 
 You can use following commands to verify any TF code change you have made or debug TF code.
 
+All of the following commands are run under the [root dir of TF repo](https://github.com/tensorflow/tensorflow/).
+
 # run Python unit tests
 ```
 bazel test --test_output=all --verbose_failures -c opt  //tensorflow/python/data/kernel_tests:unbatch_test
