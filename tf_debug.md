@@ -1,6 +1,6 @@
 # TF Internals Debugging Techniques
 
-You can use following commands to verify any TF code change you have made or debug TF code.
+You can use following commands to debug TF code or verify any code change you have made to TF internals.
 
 All of the following commands are run under the [root dir of TF repo](https://github.com/tensorflow/tensorflow/).
 
