@@ -24,7 +24,7 @@ bazel test -c opt tensorflow/core:__tensorflow_core_lib_io_legacy_lib_io_all_tes
 ```
 BufferedInputStream.ReadLine_EmptyLines is defined [here](https://github.com/tensorflow/tensorflow/blob/v2.4.0/tensorflow/core/lib/io/buffered_inputstream_test.cc#L132)
 
-# add debugging log
+# add debugging log in C++ files
 ```
 std::cout << dataset()->count_ << std::endl;
 ```
