@@ -28,3 +28,8 @@ BufferedInputStream.ReadLine_EmptyLines is defined [here](https://github.com/ten
 ```
 std::cout << dataset()->count_ << std::endl;
 ```
+
+# Print graph definition
+```
+std::cout << "SummarizeGraphDef(graph_def)" << std::endl
+```
