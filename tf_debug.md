@@ -6,9 +6,9 @@ All of the following commands are run under the [root dir of TF repo](https://gi
 
 First time invoking any of the commands takes 1 hour+ as it needs to build the entire TF project, but subsequent run is very fast with bazel cache.
 
-# run Python unit tests
+# run Python unit tests with designated bazel cache
 ```
-bazel test --test_output=all --verbose_failures -c opt  //tensorflow/python/data/kernel_tests:unbatch_test
+bazel --output_base=/private/var/tmp/_bazel_chren/7b4326bd388cb9cfdba373fadbcf24aa test --test_output=all --verbose_failures -c opt  //tensorflow/python/data/kernel_tests:unbatch_test
 ```
 
 # run Python unit tests with env vars
