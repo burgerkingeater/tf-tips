@@ -11,7 +11,7 @@ First time invoking any of the commands takes 1 hour+ as it needs to build the e
 bazel --output_base=/private/var/tmp/_bazel_chren/7b4326bd388cb9cfdba373fadbcf24aa test --test_output=all --verbose_failures -c opt  //tensorflow/python/data/kernel_tests:unbatch_test
 ```
 
-# run Python unit tests with env vars
+# run Python unit tests with env vars(E.g TF_CPP_MIN_VLOG_LEVEL or TF_CPP_MIN_LOG_LEVEL)
 ```
 bazel --output_base=/private/var/tmp/_bazel_chren/7b4326bd388cb9cfdba373fadbcf24aa  test --test_output=all --verbose_failures -c opt  //tensorflow/python/profiler:profiler_v2_test --test_env=TF_CPP_MIN_LOG_LEVEL=0 --test_env=TF_CPP_MIN_VLOG_LEVEL=2
 ```
