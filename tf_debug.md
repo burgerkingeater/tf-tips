@@ -33,13 +33,21 @@ BufferedInputStream.ReadLine_EmptyLines is defined [here](https://github.com/ten
 std::cout << dataset()->count_ << std::endl;
 ```
 
+
 # Print graph definition
 ```
 std::cout << "SummarizeGraphDef(graph_def)" << std::endl
 ```
 
+
 # Fix `not a supported wheel on this platform` error when pip install wheel package in Conda
+```
 https://github.com/apple/tensorflow_macos/issues/153
+```
+
 
 # Fix `in-place editing only works for regular files` when `./bazel-bin/tensorflow/tools/pip_package/build_pip_package`
+```
 https://github.com/tensorflow/tensorflow/issues/45434
+```
+
