@@ -13,7 +13,7 @@ bazel --output_base=/private/var/tmp/_bazel_chren/7b4326bd388cb9cfdba373fadbcf24
 
 # run bazel build/tests with higher concurrency
 ```
---jobs=XXX, default is AUTO, on my mac it's set to 16.
+bazel build XXX --jobs=XXX  #default jobs is AUTO, on my mac it's set to 16.
 ```
 
 # run Python unit tests with env vars(E.g TF_CPP_MIN_VLOG_LEVEL or TF_CPP_MIN_LOG_LEVEL)
