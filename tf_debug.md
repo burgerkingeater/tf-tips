@@ -1,4 +1,4 @@
-# TF Internals Debugging Techniques
+# TF Debugging Techniques
 
 You can use following commands to debug TF internal code or verify any code change you have made to TF internals.
 
@@ -48,3 +48,20 @@ https://github.com/apple/tensorflow_macos/issues/153
 https://github.com/tensorflow/tensorflow/issues/45434
 
 
+# Debug Estimator with customized built TF
+1. add debugging logs in TF
+2. build wheel:
+```
+bazel build //tensorflow/tools/pip_package:build_pip_package
+./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
+```
+3. activcate or create conda 
+
+4. ```pip install tensorflow=2.4.0 #this installs other needed dependencies(numpy, absl-py)```
+5.  ```pip install /tmp/tensorflow_pkg/tensorflow-XX.whl #this installs my wheel```
+
+6. run estimator unit tests
+e.g:
+```
+bazel test --test_output=all --verbose_failures -c opt  //tensorflow_estimator/python/estimator:distribute_strategy_estimator_integration_test
+```
