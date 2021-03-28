@@ -55,7 +55,7 @@ https://github.com/tensorflow/tensorflow/issues/45434
 bazel build //tensorflow/tools/pip_package:build_pip_package
 ./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
 ```
-3. activcate or create conda 
+3. activcate or create conda env just for debugging purpose
 
 4. ```pip install tensorflow=2.4.0 #this installs other needed dependencies(numpy, absl-py)```
 5.  ```pip install /tmp/tensorflow_pkg/tensorflow-XX.whl #this installs my wheel```
