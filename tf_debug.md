@@ -52,7 +52,7 @@ std::cout << "SummarizeGraphDef(graph_def)" << std::endl
 bazel build //tensorflow/tools/pip_package:build_pip_package
 ./bazel-bin/tensorflow/tools/pip_package/build_pip_package ~/tmp/tensorflow_pkg/
 ```
-You might encounter error `Fix in-place editing only works for regular files`, [here](https://github.com/tensorflow/tensorflow/issues/45434) is the resolution.
+You might encounter error `Fix in-place editing only works for regular files`, [here](https://github.com/tensorflow/tensorflow/issues/45434#issuecomment-739635923) is the resolution.
 
 
 3. activate or create conda env just for debugging purpose
