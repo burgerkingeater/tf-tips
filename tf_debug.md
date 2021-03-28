@@ -47,15 +47,16 @@ std::cout << "SummarizeGraphDef(graph_def)" << std::endl
 bazel build //tensorflow/tools/pip_package:build_pip_package
 ./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
 ```
-# You might encounter error `Fix in-place editing only works for regular files`, [here](https://github.com/tensorflow/tensorflow/issues/45434) is the resolution.
+You might encounter error `Fix in-place editing only works for regular files`, [here](https://github.com/tensorflow/tensorflow/issues/45434) is the resolution.
 
 
-```
 3. activate or create conda env just for debugging purpose
 
 4. ```pip install tensorflow=2.4.0 #this installs other needed dependencies(numpy, absl-py)```
 5.  ```pip install /tmp/tensorflow_pkg/tensorflow-XX.whl #this installs my wheel```
-# You might encounter error `not a supported wheel on this platform` error when pip install wheel package in Conda [here](https://github.com/apple/tensorflow_macos/issues/153) is the resolution. 
+
+You might encounter error `not a supported wheel on this platform` error when pip install wheel package in Conda, [here](https://github.com/apple/tensorflow_macos/issues/153) is the resolution. 
+
 6. run estimator unit tests
 e.g:
 ```
