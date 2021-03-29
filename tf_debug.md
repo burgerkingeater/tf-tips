@@ -35,7 +35,7 @@ BufferedInputStream.ReadLine_EmptyLines is defined [here](https://github.com/ten
 
 # add debugging log in C++ files
 ```
-std::cout << dataset()->count_ << std::endl;
+VLOG(1) << dataset()->count_;
 ```
 
 
