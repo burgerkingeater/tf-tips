@@ -11,6 +11,11 @@ First time invoking any of the commands takes 1 hour+ as it needs to build the e
 bazel --output_base=/private/var/tmp/_bazel_chren/7b4326bd388cb9cfdba373fadbcf24aa test --test_output=all --verbose_failures -c opt  //tensorflow/python/data/kernel_tests:unbatch_test
 ```
 
+run Python unit tests with designated python interpreter
+```
+--python_path=/usr/local/bin/python3 --noincompatible_use_python_toolchains
+```
+
 # run bazel build/tests with higher concurrency
 ```
 bazel build XXX --jobs=XXX  #default jobs is AUTO, on my mac it's set to 16.
