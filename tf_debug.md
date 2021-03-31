@@ -79,7 +79,8 @@ bazel test --test_output=all --verbose_failures -c opt  //tensorflow_estimator/p
 
 # Other tips
 1. When running unit test with bazel, if the unit test is dumping something to dir, it might get permission denied error, as the process started by bazel only has write permission in its sandbox dir.
-2. add necessary deps if import a package fails:
+2. add necessary deps if import a package fails
+
 error:
 ```
 ImportError: cannot import name 'training' from 'tensorflow_estimator.python.estimator' (/private/var/tmp/_bazel_chren/5d3b4960098180d0c97a128f62d62606/sandbox/darwin-sandbox/916/execroot/org_tensorflow_estimator/bazel-out/darwin-opt/bin/tensorflow_estimator/python/estimator/estimator_test.runfiles/org_tensorflow_estimator/tensorflow_estimator/python/estimator/__init__.py)
