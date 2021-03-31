@@ -73,4 +73,5 @@ e.g:
 bazel test --test_output=all --verbose_failures -c opt  //tensorflow_estimator/python/estimator:distribute_strategy_estimator_integration_test
 ```
 
-[Run dist. training strategy locally in unit test](https://github.com/tensorflow/estimator/blob/master/tensorflow_estimator/python/estimator/distribute_strategy_estimator_training_test.py)
+# Run dist. training strategy locally in unit test
+[Estimator unit test example](https://github.com/tensorflow/estimator/blob/master/tensorflow_estimator/python/estimator/distribute_strategy_estimator_training_test.py)
