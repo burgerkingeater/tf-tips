@@ -78,7 +78,6 @@ bazel test --test_output=all --verbose_failures -c opt  //tensorflow_estimator/p
 
 
 # Other tips
-```
-When runing unit test with bazel, if the unit test is dumpping something to dir, it might got permission denied error, as the process started by bazel only has write permission in its sandbox dir.
-```
+1. When runing unit test with bazel, if the unit test is dumpping something to dir, it might got permission denied error, as the process started by bazel only has write permission in its sandbox dir.
+
 
