@@ -1,4 +1,4 @@
-# TF Debugging Techniques
+# TF Techniques
 
 You can use following commands to debug TF internal code or verify any code change you have made to TF internals.
 
@@ -72,3 +72,5 @@ e.g:
 ```
 bazel test --test_output=all --verbose_failures -c opt  //tensorflow_estimator/python/estimator:distribute_strategy_estimator_integration_test
 ```
+
+[Run dist. training strategy locally in unit test](https://github.com/tensorflow/estimator/blob/master/tensorflow_estimator/python/estimator/distribute_strategy_estimator_training_test.py)
