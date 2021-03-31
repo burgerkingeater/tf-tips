@@ -75,3 +75,10 @@ bazel test --test_output=all --verbose_failures -c opt  //tensorflow_estimator/p
 
 # Run dist. training strategy locally in unit test
 [Estimator unit test example](https://github.com/tensorflow/estimator/blob/master/tensorflow_estimator/python/estimator/distribute_strategy_estimator_training_test.py)
+
+
+# Other tips
+```
+When runing unit test with bazel, if the unit test is dumpping something to dir, it might got permission denied error, as the process started by bazel only has write permission in its sandbox dir.
+```
+
