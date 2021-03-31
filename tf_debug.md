@@ -79,6 +79,34 @@ bazel test --test_output=all --verbose_failures -c opt  //tensorflow_estimator/p
 
 # Other tips
 1. When running unit test with bazel, if the unit test is dumping something to dir, it might get permission denied error, as the process started by bazel only has write permission in its sandbox dir.
-
-
+2. add necessary deps if import a package fails:
+error:
+```
+ImportError: cannot import name 'training' from 'tensorflow_estimator.python.estimator' (/private/var/tmp/_bazel_chren/5d3b4960098180d0c97a128f62d62606/sandbox/darwin-sandbox/916/execroot/org_tensorflow_estimator/bazel-out/darwin-opt/bin/tensorflow_estimator/python/estimator/estimator_test.runfiles/org_tensorflow_estimator/tensorflow_estimator/python/estimator/__init__.py)
+```
+solution
+```
+py_test(
+    name = "estimator_test",
+    srcs = ["estimator_test.py"],
+    python_version = "PY3",
+    shard_count = 4,
+    srcs_version = "PY3",
+    tags = ["notsan"],  # b/67510291
+    deps = [
+        ":estimator_py" ## -> add this to bazel build file
+        ":estimator",
+        ":export",
+        ":mode_keys",
+        ":model_fn",
+        ":numpy_io",
+        ":run_config",
+        # Placeholder for an internal build dep disabling tf2 behavior
+        "//tensorflow_estimator/python/estimator:expect_numpy_installed",
+        "//tensorflow_estimator/python/estimator:expect_six_installed",
+        "//tensorflow_estimator/python/estimator:expect_tensorflow_installed",
+        "//tensorflow_estimator/python/estimator:expect_tensorflow_keras_installed",
+    ],
+)
+```
 
